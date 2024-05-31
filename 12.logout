@@ -1,0 +1,13 @@
+<?php
+    # 啟動 session，以便使用 session 相關功能
+    session_start();
+
+    # 移除 session 中的 id 變數，即登出使用者
+    unset($_SESSION["id"]);
+
+    # 輸出登出成功的訊息
+    echo "登出成功....";
+
+    # 使用 HTML meta 標籤，在 3 秒後重新導向到登入頁面
+    echo "<meta http-equiv=REFRESH content='3; url=2.login.html'>";
+?>
